@@ -1,4 +1,6 @@
-System.register(['angular2/core', 'app/components/bossy.tooltip'], function(exports_1) {
+System.register(['angular2/core', 'app/components/bossy.tooltip', 'app/components/test'], function(exports_1, context_1) {
+    "use strict";
+    var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -8,7 +10,7 @@ System.register(['angular2/core', 'app/components/bossy.tooltip'], function(expo
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, bossy_tooltip_1;
+    var core_1, bossy_tooltip_1, test_1;
     var App;
     return {
         setters:[
@@ -17,6 +19,9 @@ System.register(['angular2/core', 'app/components/bossy.tooltip'], function(expo
             },
             function (bossy_tooltip_1_1) {
                 bossy_tooltip_1 = bossy_tooltip_1_1;
+            },
+            function (test_1_1) {
+                test_1 = test_1_1;
             }],
         execute: function() {
             App = (function () {
@@ -38,13 +43,13 @@ System.register(['angular2/core', 'app/components/bossy.tooltip'], function(expo
                 App = __decorate([
                     core_1.Component({
                         selector: 'my-app',
-                        template: "\n\t\t<div>Not here</div>\n\t\t<bossy-tooltip [config]=\"myConfig\"><span>Testing!</span></bossy-tooltip>\n\t",
-                        directives: [bossy_tooltip_1.BossyTooltip]
+                        template: "\n\t\t<div>Not here</div>\n\t\t<bossy-tooltip [config]=\"myConfig\"><span>Testing!</span></bossy-tooltip>\n\t\t<test></test>\n\t",
+                        directives: [bossy_tooltip_1.BossyTooltip, test_1.Test]
                     }), 
                     __metadata('design:paramtypes', [])
                 ], App);
                 return App;
-            })();
+            }());
             exports_1("App", App);
         }
     }
